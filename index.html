@@ -1,7 +1,117 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Personal website for Kodugi, including profile, work highlights, resume, and contact links."
+    >
+    <title>Kodugi | Personal Website</title>
+    <link rel="preload" href="assets/profile.jpg" as="image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
   <body>
-    <h1>Welcome to my Personal Page</h1>
-    <p>Hosted by Github Pages!</p>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#main" aria-label="Kodugi home">Kodugi</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="intro" aria-labelledby="page-title">
+        <img
+          class="profile-photo"
+          src="assets/profile.jpg"
+          width="413"
+          height="531"
+          alt="Portrait of Kodugi"
+        >
+        <p class="eyebrow">Personal Website</p>
+        <h1 id="page-title">Hello, I am Kodugi.</h1>
+        <p class="lead">
+          I build practical software, thoughtful interfaces, and clear technical
+          experiences for the web.
+        </p>
+        <div class="actions" aria-label="Primary actions">
+          <a class="button" href="assets/cv.pdf">View CV</a>
+          <a class="button secondary" href="#contact">Get in touch</a>
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="section-kicker">About</p>
+          <h2 id="about-title">Focused on useful, maintainable work.</h2>
+        </div>
+        <div class="section-body">
+          <p>
+            This site is a simple home for my profile, selected work, and resume.
+            I care about building experiences that are easy to understand, fast
+            to load, and pleasant to use across devices.
+          </p>
+        </div>
+      </section>
+
+      <section id="work" class="section" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="section-kicker">Work</p>
+          <h2 id="work-title">Selected focus areas.</h2>
+        </div>
+        <div class="section-body grid">
+          <article class="work-item">
+            <h3>Web Development</h3>
+            <p>Responsive pages, accessible UI, and static sites that are easy to ship.</p>
+          </article>
+          <article class="work-item">
+            <h3>Software Projects</h3>
+            <p>Small tools and applications with clear structure and durable foundations.</p>
+          </article>
+          <article class="work-item">
+            <h3>Technical Learning</h3>
+            <p>Continuous improvement through practical projects and careful iteration.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="resume" class="section accent" aria-labelledby="resume-title">
+        <div class="section-heading">
+          <p class="section-kicker">Resume</p>
+          <h2 id="resume-title">Download the latest CV.</h2>
+        </div>
+        <div class="section-body">
+          <p>
+            My resume is available as a PDF for a fuller look at experience,
+            education, and project background.
+          </p>
+          <a class="button" href="assets/cv.pdf">Open resume PDF</a>
+        </div>
+      </section>
+
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <p class="section-kicker">Contact</p>
+          <h2 id="contact-title">Find me online.</h2>
+        </div>
+        <div class="section-body">
+          <ul class="contact-list">
+            <li><a href="https://github.com/kodugi">GitHub</a></li>
+            <li><a href="assets/cv.pdf">CV PDF</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Kodugi. Built for GitHub Pages.</p>
+    </footer>
   </body>
 </html>
