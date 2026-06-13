@@ -7,14 +7,15 @@
   --ink: #1a1a1a;
   --ink-soft: #292929;
   --canvas: #ffffff;
-  --cloud: #f7f7f7;
-  --fog: #e8e8e8;
+  --cloud: #eef4ff;
+  --fog: #dce8ff;
   --steel: #c2c2c2;
   --graphite: #636363;
   --charcoal: #3d3d3d;
   --hairline: #e8e8e8;
   --on-ink: #ffffff;
   --shadow-soft: 0 2px 8px rgb(26 26 26 / 8%);
+  --shadow-lift: 0 20px 44px rgb(2 74 216 / 18%);
   --max-width: 1366px;
   --content-width: 1180px;
 }
@@ -31,9 +32,7 @@ body {
   margin: 0;
   background: var(--canvas);
   color: var(--ink);
-  font-family:
-    "Forma DJR Micro", Manrope, Inter, Arial, ui-sans-serif, system-ui,
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.38;
 }
@@ -83,7 +82,7 @@ button:focus-visible {
   gap: 16px;
   min-height: 36px;
   padding: 0 24px;
-  background: var(--ink);
+  background: var(--primary);
   color: var(--on-ink);
   font-size: 14px;
   line-height: 1.5;
@@ -99,8 +98,8 @@ button:focus-visible {
 }
 
 .site-header {
-  border-bottom: 1px solid var(--hairline);
-  background: var(--canvas);
+  border-bottom: 1px solid rgb(255 255 255 / 18%);
+  background: var(--ink);
 }
 
 .nav {
@@ -114,7 +113,7 @@ button:focus-visible {
 }
 
 .brand {
-  color: var(--ink);
+  color: var(--on-ink);
   font-size: 20px;
   font-weight: 700;
   line-height: 1;
@@ -136,14 +135,16 @@ button:focus-visible {
   align-items: center;
   min-height: 44px;
   padding: 8px 16px;
-  color: var(--ink);
-  font-size: 16px;
-  font-weight: 400;
+  color: var(--on-ink);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .nav-links a:hover {
-  color: var(--primary);
+  color: var(--primary-soft);
 }
 
 main {
@@ -166,6 +167,8 @@ main {
 
 .intro {
   overflow: hidden;
+  background:
+    linear-gradient(118deg, var(--ink) 0 58%, var(--primary) 58% 100%);
 }
 
 .hero-shell {
@@ -178,46 +181,49 @@ main {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(240px, 0.78fr) minmax(0, 1.22fr);
+  grid-template-columns: minmax(260px, 0.95fr) minmax(0, 1.05fr);
   align-items: center;
   gap: clamp(32px, 6vw, 72px);
+  border-left: 12px solid var(--primary);
   border-radius: 16px;
   background: var(--canvas);
   padding: clamp(24px, 5vw, 48px);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow-lift);
 }
 
 .chevron {
   position: absolute;
-  top: 12%;
+  top: -8%;
   z-index: 0;
-  width: clamp(56px, 8vw, 96px);
-  height: 76%;
-  background: var(--primary);
+  width: clamp(90px, 11vw, 150px);
+  height: 116%;
+  background: var(--primary-bright);
   transform: skewX(-24deg);
 }
 
 .chevron-left {
-  left: clamp(-48px, -4vw, -16px);
+  left: clamp(-78px, -5vw, -28px);
 }
 
 .chevron-right {
-  right: clamp(-48px, -4vw, -16px);
+  right: clamp(-78px, -5vw, -28px);
 }
 
 .photo-frame {
   overflow: hidden;
   justify-self: center;
-  width: min(100%, 320px);
-  border: 1px solid var(--hairline);
+  width: min(100%, 430px);
+  border: 8px solid var(--canvas);
   border-radius: 16px;
-  background: var(--cloud);
+  background: var(--ink);
+  box-shadow: 0 8px 24px rgb(26 26 26 / 12%);
 }
 
 .profile-photo {
   width: 100%;
-  aspect-ratio: 413 / 531;
+  aspect-ratio: 2458 / 3000;
   object-fit: cover;
+  object-position: 72% 52%;
 }
 
 .hero-copy {
@@ -227,10 +233,10 @@ main {
 .eyebrow,
 .section-kicker {
   margin: 0 0 12px;
-  color: var(--graphite);
+  color: var(--primary);
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0;
+  letter-spacing: 0.7px;
   line-height: 1.3;
   text-transform: uppercase;
 }
@@ -251,6 +257,7 @@ h2,
 h3 {
   margin: 0;
   color: var(--ink);
+  font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1;
@@ -382,6 +389,7 @@ h1 {
 }
 
 .project-group {
+  border-top: 6px solid var(--primary);
   padding: 24px;
 }
 
@@ -431,6 +439,7 @@ h1 {
 }
 
 .feature-card {
+  border-left: 12px solid var(--primary);
   padding: clamp(24px, 5vw, 48px);
 }
 
@@ -458,6 +467,7 @@ h1 {
   max-width: 100%;
   border: 1px solid var(--primary-bright);
   border-radius: 9999px;
+  background: var(--primary);
   padding: 8px 20px;
   color: var(--on-ink);
   text-decoration: none;
