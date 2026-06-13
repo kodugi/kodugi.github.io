@@ -212,7 +212,8 @@ main {
 .photo-frame {
   overflow: hidden;
   justify-self: center;
-  width: min(100%, 430px);
+  width: min(100%, 520px);
+  aspect-ratio: 4 / 3;
   border: 8px solid var(--canvas);
   border-radius: 16px;
   background: var(--ink);
@@ -221,9 +222,9 @@ main {
 
 .profile-photo {
   width: 100%;
-  aspect-ratio: 2458 / 3000;
+  height: 100%;
   object-fit: cover;
-  object-position: 72% 52%;
+  object-position: right 66%;
 }
 
 .hero-copy {
@@ -556,7 +557,8 @@ h1 {
   }
 
   .photo-frame {
-    max-width: 260px;
+    width: 100%;
+    max-width: 520px;
   }
 
   .actions,
