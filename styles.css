@@ -76,28 +76,6 @@ button:focus-visible {
   transform: translateY(0);
 }
 
-.utility-strip {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  min-height: 36px;
-  padding: 0 24px;
-  background: var(--primary);
-  color: var(--on-ink);
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.utility-strip p {
-  margin: 0;
-}
-
-.utility-strip a {
-  color: var(--on-ink);
-  font-size: 14px;
-}
-
 .site-header {
   position: sticky;
   top: 0;
@@ -579,10 +557,6 @@ h1 {
 @media (max-width: 767px) {
   html {
     scroll-padding-top: 0;
-  }
-
-  .utility-strip {
-    padding-inline: 16px;
   }
 
   .site-header {
