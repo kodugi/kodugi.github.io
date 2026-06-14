@@ -20,11 +20,13 @@
     </div>
 
     <header class="site-header">
-      <nav class="nav" aria-label="Primary navigation">
-        <a class="brand" href="#main" aria-label="Junwoo Park home">Junwoo Park</a>
-        <ul class="nav-links">
+      <nav class="nav" aria-label="Section navigation">
+        <a class="brand" href="#home" aria-label="Junwoo Park home">Junwoo Park</a>
+        <ul class="nav-links" aria-label="Page sections">
+          <li><a href="#home">Home</a></li>
           <li><a href="#about">About Me</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#courses">Courses</a></li>
           <li><a href="#resume">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -32,7 +34,7 @@
     </header>
 
     <main id="main">
-      <section class="intro band" aria-labelledby="page-title">
+      <section id="home" class="intro band" aria-labelledby="page-title">
         <div class="hero-shell">
           <span class="chevron chevron-left" aria-hidden="true"></span>
           <div class="hero-card">
@@ -140,6 +142,40 @@
                 </li>
               </ul>
             </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="courses" class="band" aria-labelledby="courses-title">
+        <div class="section">
+          <div class="section-heading">
+            <p class="section-kicker">Planned Courses</p>
+            <h2 id="courses-title">Courses I plan to take.</h2>
+          </div>
+          <div class="section-body">
+            <p class="section-intro">
+              A working list of future coursework.
+            </p>
+            <div class="course-grid">
+              <article class="course-card">
+                <h3>Algorithm</h3>
+              </article>
+              <article class="course-card">
+                <h3>Computer Graphics</h3>
+              </article>
+              <article class="course-card">
+                <h3>Database</h3>
+              </article>
+              <article class="course-card">
+                <h3>Software Development Concepts and Practice</h3>
+              </article>
+              <article class="course-card">
+                <h3>Operating Systems</h3>
+              </article>
+              <article class="course-card">
+                <h3>Computer Networks</h3>
+              </article>
+            </div>
           </div>
         </div>
       </section>
